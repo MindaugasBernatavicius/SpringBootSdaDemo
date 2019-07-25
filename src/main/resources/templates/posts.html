@@ -1,0 +1,21 @@
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/main.html}">
+<div layout:fragment="content" class="container">
+    <div class="jumbotron">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Author</th>
+                <th scope="col">Post</th>
+            </tr>
+            </thead>
+            <tr th:each="post: ${posts}">
+                <td th:text="${post.id}" />
+                <td th:text="${post.author}" />
+                <td th:text="${post.post}" />
+            </tr>
+        </table>
+    </div>
+</div>
